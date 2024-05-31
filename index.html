@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>calculateSalary</title>
+</head>
+
+<body>
+   
+ 
+    <div class="container">
+        <form id="userForm" class="form">
+            <h2>User Information Form</h2>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subjects">Subjects:</label>
+                <div class="subject-options">
+                    <input type="checkbox" id="html" name="subjects" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="subjects" value="CSS">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript" name="subjects" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" id="vuejs" name="subjects" value="VueJS">
+                    <label for="vuejs">VueJS</label>
+                    <input type="checkbox" id="angular" name="subjects" value="Angular">
+                    <label for="angular">Angular</label>
+                </div>
+            <div class="form-group">
+                <label for="greetingType">Greeting Type:</label>
+                <select id="greetingType" name="greetingType" required>
+                    <option value="">Select</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="working">Are you working?</label>
+                <select id="working" name="working">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div id="salaryDiv" style="display: none;">
+                <div class="form-group">
+                    <label for="hourlyRate">Hourly Rate (ZAR):</label>
+                    <input type="number" id="hourlyRate" name="hourlyRate" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="hoursWorked">Hours Worked:</label>
+                    <input type="number" id="hoursWorked" name="hoursWorked" min="0" step="0.01">
+                </div>
+                <button type="button" id="calculateButton">Calculate Salary</button>
+                <div id="salaryOutput"></div>
+            </div>
+            
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+            <div class="button-group">
+                <button type="button" id="submitButton">Submit</button>
+                <button type="button" id="clearButton">Clear</button>
+            </div>
+        </form>
+
+    <script src="./script/code.js"></script>
+</body>
+
+</html>
